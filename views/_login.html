@@ -1,8 +1,9 @@
 <div class="container" ng-controller="LoginController">
     <div class="page-header">
-        <h2>Please Login to DI.fm</h2>
+        <h3>Please Login to DI.fm</h3>
     </div>
     <form ng-submit="login()" name="form" class="form-horizontal" role="form">
+        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
         <div class="form-group">
             <label class="col-xs-2 control-label">Username</label>
             <div class="col-xs-10">

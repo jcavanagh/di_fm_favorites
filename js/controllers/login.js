@@ -6,6 +6,13 @@ angular.module('di_fm_favorites.controllers')
         var username = $scope.model.username
             ,password = $scope.model.password;
 
+        //Alerts stuff
+        $scope.alerts = [];
+
+        $scope.closeAlert = function(index) {
+            $scope.alerts.splice(index, 1);
+        }
+
         //Attempt login
         $http.get(DI_FM_AUTH_URL, {
             params: {
@@ -19,6 +26,11 @@ angular.module('di_fm_favorites.controllers')
         }).error(function(resp, status) {
             console.log('failed!')
             console.log(resp, status);
+
+            $scope.alerts[0] = {
+                type: 'danger'
+                ,msg: 'Login failed - please try again'
+            };
         });
     }
 });
