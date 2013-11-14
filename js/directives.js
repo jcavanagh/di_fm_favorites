@@ -1,1 +1,0 @@
-angular.module('di_fm_favorites.directives', []);

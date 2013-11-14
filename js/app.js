@@ -1,6 +1,6 @@
 angular.module('di_fm_favorites', [
     'ngRoute',
-    'di_fm_favorites.directives'
+    'di_fm_favorites.controllers'
 ]).config(function($routeProvider) {
     //Routes!
     $routeProvider.when('/', {

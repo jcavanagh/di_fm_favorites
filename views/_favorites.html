@@ -1,0 +1,3 @@
+<div>
+    Favorites
+</div>
