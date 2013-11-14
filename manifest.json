@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "DI.fm Favorites",
+  "description": "This shows a list of what's playing on your favorite DI.fm stations.",
+  "version": "1.0",
+
+  "permissions": [
+    "http://api.audioaddict.com/",
+    "http://listen.di.fm/"
+  ],
+
+  "browser_action": {
+    "default_icon": "DIFM.png",
+    "default_popup": "popup.html"
+  }
+}
