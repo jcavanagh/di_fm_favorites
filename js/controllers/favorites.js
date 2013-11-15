@@ -89,7 +89,8 @@ angular.module('di_fm_favorites.controllers')
                                     //Build our favorite
                                     return {
                                         station: station.name,
-                                        songTitle: trackHistory.title
+                                        title: trackHistory.title,
+                                        artist: trackHistory.artist
                                     };
                                 }
                             } else {
