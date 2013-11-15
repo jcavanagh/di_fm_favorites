@@ -12,10 +12,12 @@ angular.module('di_fm_favorites', [
         templateUrl: '/views/_login.html'
     });
 }).run(function($rootScope, $location) {
-    //http://stackoverflow.com/questions/11541695/angular-js-redirecting-to-a-certain-route-based-on-condition
-    // register listener to watch route changes
-    $rootScope.$on( "$routeChangeStart", function(event, next, current) {
-        if ( $rootScope.user == null ) {
+    $rootScope.$on('$routeChangeStart', function(event, next, current) {
+        //Try loading from localstorage
+        $rootScope.user = localStorage.getItem('di_fm_user');
+
+        //If we don't have user data, we need to login
+        if ( $rootScope.user === null ) {
             // no logged user, we should be going to #login
             if ( next.templateUrl == '/views/_login.html' ) {
                 // already going to #login, no redirect needed
@@ -25,4 +27,4 @@ angular.module('di_fm_favorites', [
             }
         }
     });
-})
+});

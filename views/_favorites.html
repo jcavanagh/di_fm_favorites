@@ -1,3 +1,19 @@
-<div>
-    Favorites
+<div class="container" ng-controller="FavoritesController">
+    <div ng-show="!favorites">
+        <h3>Loading favorites...</h3>
+    </div>
+    <div ng-show="favorites && !favorites.length">
+        <h3>You have no favorites!</h3>
+        <p>Favorite some stations on DI.fm and try again!</p>
+    </div>
+    <div ng-repeat="favorite in favorites">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ favorite.station }}</h3>
+            </div>
+            <div class="panel-body">
+                {{ favorite.songTitle }}
+            </div>
+        </div>
+    </div>
 </div>

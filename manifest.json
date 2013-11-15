@@ -6,6 +6,7 @@
   "version": "1.0",
 
   "permissions": [
+    "storage",
     "https://api.audioaddict.com/",
     "http://listen.di.fm/"
   ],
