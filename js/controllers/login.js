@@ -20,6 +20,12 @@ angular.module('di_fm_favorites.controllers')
         //Stash username to remember
         localStorage.setItem('di_fm_last_username', username);
 
+        //Show logging in alert
+        $scope.alerts[0] = {
+            type: 'warning',
+            msg: 'Logging in...'
+        };
+
         //Attempt login
         $http.get(DI_FM_AUTH_URL, {
             params: {
