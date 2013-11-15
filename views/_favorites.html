@@ -1,4 +1,5 @@
 <div class="container" ng-controller="FavoritesController">
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
     <div ng-show="!favorites">
         <h3>Loading favorites...</h3>
     </div>
