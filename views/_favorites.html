@@ -25,7 +25,9 @@
         <div ng-repeat="favorite in favorites">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{ favorite.station }}</h3>
+                    <h3 class="panel-title">
+                        <a ng-click="openTab(favorite.url)">{{ favorite.station }}</a>
+                    </h3>
                 </div>
                 <div class="panel-body">
                     <strong>{{ favorite.artist }}</strong><br>

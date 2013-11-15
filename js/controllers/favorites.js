@@ -90,7 +90,8 @@ angular.module('di_fm_favorites.controllers')
                                     return {
                                         station: station.name,
                                         title: trackHistory.title,
-                                        artist: trackHistory.artist
+                                        artist: trackHistory.artist,
+                                        url: 'http://www.di.fm/' + station.key
                                     };
                                 }
                             } else {
@@ -104,6 +105,12 @@ angular.module('di_fm_favorites.controllers')
             });
         });
     };
+
+    $scope.openTab = function(url) {
+        chrome.tabs.create({
+            url: url
+        });
+    }
 
     $scope.refresh = function() {
         $scope.favorites = null;
