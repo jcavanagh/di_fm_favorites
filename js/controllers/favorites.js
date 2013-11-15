@@ -1,5 +1,5 @@
 angular.module('di_fm_favorites.controllers')
-.controller('FavoritesController', function($scope, $route, $location, $http) {
+.controller('FavoritesController', function($scope, $route, $location, $http, $interval) {
     var UPDATE_INTERVAL = '60000',
         UPDATE_TIMEOUT = '15000',
         DI_FM_STATIONS_URL = 'http://listen.di.fm/streamlist',
@@ -109,7 +109,7 @@ angular.module('di_fm_favorites.controllers')
         $scope.favorites = null;
 
         $scope.update();
-    }
+    };
 
     $scope.logout = function() {
         //Nuke localstorage user
@@ -121,4 +121,6 @@ angular.module('di_fm_favorites.controllers')
 
     //Update!
     $scope.update();
+
+    $interval($scope.refresh, UPDATE_INTERVAL, 0, true);
 });
