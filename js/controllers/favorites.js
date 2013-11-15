@@ -105,6 +105,20 @@ angular.module('di_fm_favorites.controllers')
         });
     };
 
+    $scope.refresh = function() {
+        $scope.favorites = null;
+
+        $scope.update();
+    }
+
+    $scope.logout = function() {
+        //Nuke localstorage user
+        localStorage.removeItem('di_fm_user');
+
+        //Route to login
+        $location.path('/login');
+    };
+
     //Update!
     $scope.update();
 });

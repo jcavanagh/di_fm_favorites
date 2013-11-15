@@ -11,6 +11,10 @@ angular.module('di_fm_favorites', [
     $routeProvider.when('/login', {
         templateUrl: '/views/_login.html'
     });
+
+    $routeProvider.when('/favorites', {
+        templateUrl: '/views/_favorites.html'
+    });
 }).run(function($rootScope, $location) {
     $rootScope.$on('$routeChangeStart', function(event, next, current) {
         //Try loading from localstorage
