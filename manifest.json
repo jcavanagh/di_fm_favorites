@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "DI.fm Favorites",
-  "description": "This shows a list of what's playing on your favorite DI.fm stations.",
+  "description": "Shows a list of what's playing on your favorite DI.fm stations.",
   "version": "1.0",
 
   "permissions": [
