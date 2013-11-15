@@ -1,0 +1,1 @@
+angular.module('di_fm_favorites_bg.services', []);

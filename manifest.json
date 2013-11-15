@@ -5,6 +5,10 @@
   "description": "Shows a list of what's playing on your favorite DI.fm stations.",
   "version": "1.0",
 
+  "background": {
+    "page": "background.html"
+  },
+
   "permissions": [
     "storage",
     "tabs",
