@@ -18,6 +18,7 @@ angular.module('di_fm_favorites.controllers')
 
     $scope.refresh = function() {
         $scope.favorites = null;
+        $scope.alerts = [];
 
         if(msgPort) {
             msgPort.postMessage({ msg: 'getFavorites' });
